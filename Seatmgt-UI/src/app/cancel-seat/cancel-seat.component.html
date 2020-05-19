@@ -1,0 +1,20 @@
+<div>
+    <div class="container" style="margin-top: 70px; margin-left: 200px;">
+    <form  class="in-line" #data="ngForm" (ngSubmit)="data.valid && cancelSeat(data)">
+       <div >
+        <h1>Cancel Seat</h1>
+        <label>Enter Seat Id</label>
+        <input type="number" class="form-control" name="seatId" ngModel #seatIdCtrl=ngModel required>
+        <div *ngIf="seatIdCtrl.errors!=null && seatIdCtrl.errors.required">
+          Id is required
+        </div>    
+      </div>
+  
+      <br>
+  
+      <div>
+        <button class="btn btn-default" type="reset" >Cancel Seat</button>
+      </div>
+    </form>
+    </div>
+</div> 
